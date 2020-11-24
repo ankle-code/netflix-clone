@@ -3,7 +3,7 @@
 <head>
 	<!-- META -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
 	<!-- TÍTULO -->
 	<title>Netflix</title>
@@ -17,69 +17,64 @@
 <body>
 	
 	<!-- CABEÇALHO -->
-	<header class="topo">
+	<header class="header">
 		<figure>
-			<img src="img/netflix-logo.png" alt="Netflix">
-			<figcaption>Netflix</figcaption>
+			<img class="header__image" src="img/netflix-logo.png" alt="Netflix">
 		</figure>
 	</header>
 
 	<!-- PÁGINA INICIAL -->
-	<div class="pg-home">
+	<div class="home">
 		
 		<section>
 
 			<header>
-				<h2>Quem está assistindo?</h2>
+				<h2 class="home__title">Quem está assistindo?</h2>
 			</header>
 
 			<!-- LISTA DE USUÁRIOS -->
-			<ul>
+			<ul class="home__box">
 				
 				<!-- USUÁRIO 1 -->
-				<li>
+				<li class="home__box-item">
 					<figure>
-						<img src="img/avatar.png" alt="Gabriel">
-						<figcaption>Gabriel</figcaption>
+						<img class="home__image home__image--hoover" src="img/avatar.png" alt="Gabriel">
 					</figure>
 
-					<h3>Gabriel</h3>
+					<h3 class="home__title home__title--small">Gabriel</h3>
 				</li>
 				
 				<!-- USUÁRIO 2 -->
-				<li>
+				<li class="home__box-item">
 					<figure>
-						<img src="img/avatar1.png" alt="Maria">
-						<figcaption>Maria</figcaption>
+						<img class="home__image home__image--hoover" src="img/avatar1.png" alt="Maria">
 					</figure>
 
-					<h3>Maria</h3>
+					<h3 class="home__title home__title--small">Maria</h3>
 				</li>
 				
 				<!-- USUÁRIO 3 -->
-				<li>
+				<li class="home__box-item">
 					<figure>
-						<img src="img/avatar2.png" alt="Renato">
-						<figcaption>Renato</figcaption>
+						<img class="home__image home__image--hoover" src="img/avatar2.png" alt="Renato">
 					</figure>
 
-					<h3>Renato</h3>
+					<h3 class="home__title home__title--small">Renato</h3>
 				</li>
 
 				<!-- ADICIONAR PERFIL-->
-				<li class="addPerfil">
+				<li class="home__box-item">
 					<figure>
-						<img src="img/plus-sign.png" alt="Adicionar perfil">
-						<figcaption>Adicionar perfil</figcaption>
+						<img class="home__image home__image--hoover-radius" src="img/plus-sign.png" alt="Adicionar perfil">
 					</figure>
 
-					<h3>Adicionar perfil</h3>
+					<h3 class="home__title home__title--small">Adicionar perfil</h3>
 				</li>
 
 			</ul>
 
 			<footer>
-				<button>Gerenciar Perfis</button>
+				<button class="home__button">Gerenciar Perfis</button>
 			</footer>
 
 		</section>

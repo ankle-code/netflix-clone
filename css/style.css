@@ -5,7 +5,7 @@ Author URI: kenzie.com.br;
 Version: 1.0
  
 --------------------------------------------
-SUGESTÃO DE ESTRUTURAÇÃO BASE 
+SUGESTÃO DE ESTRUTURAÇÃO BASE (BEM >>>>>>>>>>>>>>>>> BEM hoje, BEM amanha, BEM ate criarem algo melhor e mais estruturado, claro) 
 --------------------------------------------
 **** DECLARAÇÃO DE VARIÁVEIS
 **** BODY
@@ -14,26 +14,151 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
-/* VARIÁVEIS */
-:root{
-  
+html, body {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 27%);
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+	margin: 0%;
+	padding: 0;
+	box-sizing: border-box;
+}
+figure {
+	margin: 0;
 }
 
-/*BODY*/
-	body{
 
-	}
+.header {
+	width: 100vw;
+}
 
-/*TOPO*/
-	header.topo{
-		
-	}
+.header__image {
+	width: 110px;
+	margin: 20px 60px;
+}
 
-/*RODAPÉ*/
+
+.home {
+	margin: 100px auto;
+	text-align: center;
+}
+
+.home__title {
+	color: #fff;
+	font-size: 40px;
+}
+
+.home__title--small {
+	font-size: 22px;
+	letter-spacing: 1px;
+	color: #808080;
+	font-weight: lighter;
+}
+
+.home__box{
+	list-style: none;
+	columns: 4;
+	width: 858px;
+	display: inline-block;
+	padding: 0;
+}
+
+.home__box-item {
+	width: 186px;
+}
+
+.home__image {
+	width: 186px;
+}
+
+.home__image--hoover:hover {
+	border: 3px solid #fff;
+}
+
+.home__box-item:hover > .home__title--small {
+	color: #fff;
+	font-weight: bold;
+}
+
+.home__image--hoover-radius:hover {
+	border: 3px solid #fff;
+	border-radius: 50%;
+}
+
+.home__button {
+	border: 1px solid #808080;
+	background-color: transparent;
+	color: #808080;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	margin-top: 50px;
+	padding: 10px 25px;
+	font-size: 15px;
+}
+
+.home__button:hover {
+	border-color: #fff;
+	color: #fff;
+}
+
+
+@media screen and (max-width: 1200px) {
 	
-
-/*PÁGINA INICIAL*/
-	div.pg-home{
-		
+	.header__image {
+		margin: 0;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		left: 50%;
+		top: 10%;
+		width: 200px;
 	}
 
+	.home {
+		margin-top: 150px;
+	}
+
+	.home__title {
+		font-size: 40px;
+	}
+
+	.home__title--small {
+		font-size: 23px;
+	}
+
+	.home__box-item {
+		display: inline;
+	}
+
+	.home__box {
+		columns: 2;
+		text-align: center;
+	}
+
+	.home__image {
+		width: 90px;
+	}
+
+	.home__button {
+		padding: 35px 85px;
+		font-size: 23px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+
+	.home {
+		margin: 150px 0  0;
+	}
+
+	.home__box {
+		columns: 1;
+		width: 100%;
+	}
+
+	.home__button {
+		padding: 4% 7%;
+		margin: 0 0 0 0;
+	}
+
+}
