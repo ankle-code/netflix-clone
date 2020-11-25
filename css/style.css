@@ -17,9 +17,10 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE (BEM >>>>>>>>>>>>>>>>> BEM hoje, BEM amanha, BE
 html, body {
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 27%);
-	background-size: 100vw 100vh;
+	background-size: contain;
+	height: 100%;
 	background-repeat: no-repeat;
-	margin: 0%;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -69,9 +70,10 @@ figure {
 
 .home__image {
 	width: 186px;
+	border: 3px solid transparent;
 }
 
-.home__image--hoover:hover {
+.home__image:hover {
 	border: 3px solid #fff;
 }
 
@@ -92,7 +94,6 @@ figure {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	cursor: pointer;
-	margin-top: 50px;
 	padding: 10px 25px;
 	font-size: 15px;
 }
@@ -105,6 +106,10 @@ figure {
 
 @media screen and (max-width: 1200px) {
 	
+	html,body {
+		min-height: 900px;
+	}
+
 	.header__image {
 		margin: 0;
 		position: absolute;
@@ -148,7 +153,7 @@ figure {
 @media screen and (max-width: 860px) {
 
 	.home {
-		margin: 150px 0  0;
+		margin: 150px 0 0 0;
 	}
 
 	.home__box {
@@ -159,6 +164,10 @@ figure {
 	.home__button {
 		padding: 4% 7%;
 		margin: 0 0 0 0;
+	}
+
+	.home__image {
+		width: 90px;
 	}
 
 }
