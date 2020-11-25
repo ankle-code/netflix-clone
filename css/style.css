@@ -29,13 +29,10 @@ figure {
 }
 
 
-.header {
-	width: 100vw;
-}
-
 .header__image {
 	width: 110px;
 	margin: 20px 60px;
+	cursor: pointer;
 }
 
 
