@@ -61,7 +61,7 @@ figure {
 	padding: 0;
 }
 
-.card-item {
+.card__item {
 	width: 186px;
 	cursor: pointer;
 }
@@ -92,7 +92,7 @@ figure {
 	font-weight: bold;
 }
 
-.card__image--hoover-radius:hover {
+.card__image--radius:hover {
 	border-radius: 50%;
 }
 
