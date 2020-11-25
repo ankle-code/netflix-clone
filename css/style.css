@@ -13,12 +13,16 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE (BEM >>>>>>>>>>>>>>>>> BEM hoje, BEM amanha, BE
 **** RODAPÉ
 **** PÁGINA INICIAL
 */
+:root {
+	--titleColor: #fff;
+	--buttonColor: #808080;
+}
 
-html, body {
+body {
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 27%);
 	background-size: contain;
-	height: 100%;
+	height: 100vh;
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
@@ -28,10 +32,6 @@ figure {
 	margin: 0;
 }
 
-:root {
-	--titleColor: #fff;
-	--buttonColor: #808080;
-}
 
 .header__image {
 	width: 110px;
@@ -39,25 +39,21 @@ figure {
 	cursor: pointer;
 }
 
+.header__image--mobile {
+	display: none;
+}
+
+.header__title {
+	color: var(--titleColor);
+	font-size: 40px;
+}
 
 .home {
 	margin: 100px auto;
 	text-align: center;
 }
 
-.home__title {
-	color: var(--titleColor);
-	font-size: 40px;
-}
-
-.home__title--small {
-	font-size: 22px;
-	letter-spacing: 1px;
-	color: var(--buttonColor);
-	font-weight: lighter;
-}
-
-.home__box{
+.card{
 	list-style: none;
 	columns: 4;
 	width: 858px;
@@ -65,26 +61,38 @@ figure {
 	padding: 0;
 }
 
-.home__box-item {
+.card-item {
 	width: 186px;
 	cursor: pointer;
 }
 
-.home__image {
+.card__title {
+	font-size: 40px;
+	font-size: 22px;
+	letter-spacing: 1px;
+	color: var(--buttonColor);
+	font-weight: lighter;
+}
+
+.card__image {
 	width: 186px;
 	border: 3px solid transparent;
 }
 
-.home__image:hover {
+.card__caption {
+	display: none;
+}
+
+.card__image:hover {
 	border-color: var(--titleColor);
 }
 
-.home__box-item:hover > .home__title--small {
+.card__item:hover > .card__title {
 	color: var(--titleColor);
 	font-weight: bold;
 }
 
-.home__image--hoover-radius:hover {
+.card__image--hoover-radius:hover {
 	border-radius: 50%;
 }
 
@@ -107,8 +115,8 @@ figure {
 
 @media screen and (max-width: 1200px) {
 	
-	html,body {
-		min-height: 980px;
+	body {
+		height: auto;
 	}
 
 	.header__image {
@@ -117,34 +125,30 @@ figure {
 		transform: translate(-50%,-50%);
 		left: 50%;
 		top: 10%;
-		width: 200px;
-	}
-
+		width: 250px;
+	}	
+	
 	.home {
 		margin-top: 175px;
 	}
-
-	.home__title {
-		font-size: 40px;
-	}
-
-	.home__title--small {
-		font-size: 23px;
-	}
-
-	.home__box-item {
-		display: inline;
-	}
-
-	.home__box {
+	
+	.card {
 		columns: 2;
 		text-align: center;
 	}
-
-	.home__image {
-		width: 90px;
+	
+	.card-item {
+		display: inline;
 	}
 
+	.card__title {
+		font-size: 40px;
+	}
+	
+	.card__image {
+		width: 180px;
+	}
+	
 	.home__button {
 		padding: 35px 85px;
 		font-size: 23px;
@@ -152,31 +156,34 @@ figure {
 }
 
 @media screen and (max-width: 860px) {
-
+	
 	.header__image {
-		width:0px;
-		height:0px;
-		padding: 35px 30px;
-		background: url(../img/nficon2016.png);
-		background-repeat: no-repeat;
+		display: none;
 	}
 
+	.header__image--mobile {
+		display: block;
+		width: 100px;
+	}
+	
 	.home {
-		margin: 150px 0 0 0;
+		margin: 0;
+		margin-top: 175px;
+		padding-bottom: 50px;
 	}
-
-	.home__box {
+	
+	.card {
 		columns: 1;
 		width: 100%;
+	}
+
+	.card__image {
+		width: 200px;
 	}
 
 	.home__button {
 		padding: 4% 7%;
 		margin: 0 0 0 0;
-	}
-
-	.home__image {
-		width: 90px;
 	}
 
 }
