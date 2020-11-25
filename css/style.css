@@ -75,7 +75,7 @@ figure {
 }
 
 .home__image:hover {
-	border: 3px solid #fff;
+	border-color:  #fff;
 }
 
 .home__box-item:hover > .home__title--small {
@@ -84,7 +84,6 @@ figure {
 }
 
 .home__image--hoover-radius:hover {
-	border: 3px solid #fff;
 	border-radius: 50%;
 }
 
