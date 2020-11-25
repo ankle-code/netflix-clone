@@ -66,6 +66,7 @@ figure {
 
 .home__box-item {
 	width: 186px;
+	cursor: pointer;
 }
 
 .home__image {
